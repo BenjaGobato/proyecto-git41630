@@ -184,3 +184,19 @@ a {
   grid-row-start: span 2;
 }
 }
+/* -------------ANIMACIONES INDUMENTARIA */
+
+#agrandar{
+  width: 90%;
+  margin: 5%;
+  grid-gap: 30px;
+}
+
+#agrandar img{
+  width: 100%;
+  transition: all 300ms;
+}
+
+#agrandar img:hover{
+  transform: scale(1.15);
+}
