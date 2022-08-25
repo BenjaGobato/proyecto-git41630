@@ -200,3 +200,10 @@ a {
 #agrandar img:hover{
   transform: scale(1.15);
 }
+
+/* Una clase que use en bootstrap */
+
+.centro {
+  background-color: black;
+  color: white;
+}
