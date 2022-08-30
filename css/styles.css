@@ -1,182 +1,144 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  ul,
-  ol {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  /* Algunas clases */
-  
-  .color-blue {
-    color: blue;
-  }
-  
-  .color-gold {
-    color: gold
-  }
-  
-  /* Header */
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+ul a,
+ol a {
+  text-decoration: none;
+}
+
+/* Algunas clases */
+.color-blue {
+  color: blue;
+}
+
+.color-gold {
+  color: gold;
+}
+
+/*------HEADER----------*/
+.header {
+  background-color: rgba(255, 217, 0, 0.87);
+  color: white;
+  padding: 10px;
+}
+.header__title {
+  text-align: center;
+  padding: 15px;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+@media (min-width: 1200px) {
   .header {
-    background-color: rgba(255, 217, 0, 0.87);
-    color: white;
-    padding: 10px;
-  }
-  
-  .header__title {
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .header__navbar ul {
     display: flex;
-    justify-content: space-around;
-  }
-  
-  @media (min-width: 1200px) {
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  
-    }
-  
-    .header__navbar {
-      width: 50%;
-    }
-  }
-    
-  /* -------HERO--------- */
-  
-  .hero {
-    height: 85vh;
-  
-    background-image: url(../img/bocampeon.jpg);
-    
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
-    
-  .hero__text {
-    color: black;
-    text-align: center;
-  
-    padding: 15px;
-    border-radius: 20px;
-    width: 75%;
-  
-    background-color: rgba(128, 128, 128, 0.753);
-  }
-  
-  /* ---------FOOTER------------ */
-  
-  .footer {
-    background-color: black;
-    color: blue;
-  
-    padding: 30px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer__border {
-    display: grid;
-    grid-template-columns: 3;
-    border-style: solid;
-    color: white;
-    border-radius: 20px;
-    overflow: hidden;
-    
-  }
-  
-  /* -----GRID PARA INDUMENTARIA */
+}
+/*-----HERO-------*/
+.hero {
+  height: 85vh;
+  background-image: url(../img/bocampeon.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__text {
+  color: black;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  width: 75%;
+  background-color: rgba(128, 128, 128, 0.753);
+}
 
-  .fondo-negro {
-    background-color: black;
-  }
+/*-----FOOTER-------*/
+.footer {
+  background-color: black;
+  color: blue;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__border {
+  display: grid;
+  grid-template-columns: 3;
+  border-style: solid;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
-  .fondo-dorado {
-    background-color: gold;
-  }
-  
-  .centrar {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-  
+/*----GRID INDUMENTARIA-----*/
+.centrar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__item {
+  position: relative;
+}
+.gallery__title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgb(0, 0, 0));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.gallery__item:nth-child(1) {
+  grid-column-start: span 2;
+}
+.gallery__item:nth-child(3) {
+  grid-column-start: span 2;
+}
+.gallery__item:nth-child(2) {
+  grid-row-start: span 2;
+}
+.gallery__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+.gallery__item:nth-child(5) {
+  grid-row-start: span 2;
+}
+.gallery__item:nth-child(8) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.gallery__item:nth-child(9) {
+  grid-row-start: span 2;
+}
+
+/*----VISTA PARA TABLETS----*/
+@media (min-width: 768px) {
   .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 150px;
-    padding: 20px;
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .gallery__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .gallery__item {
-    position: relative;
-  }
-  
-  .gallery__title {
-    position: absolute;
-    bottom: 0;
-    color: white;
-    background: linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,1));
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-  }
-  
-  .gallery__item:nth-child(1) {
-    grid-column-start: span 2;
-  }
-  .gallery__item:nth-child(3) {
-    grid-column-start: span 2;
-  }
-  
-  .gallery__item:nth-child(2) {
-    grid-row-start: span 2;
-  }
-  
-  .gallery__item:nth-child(4) {
-    grid-column-start: span 2;
-  }
-  
-  .gallery__item:nth-child(5) {
-    grid-row-start: span 2;
-  }
-  .gallery__item:nth-child(8) {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
-  }
-  
-  .gallery__item:nth-child(9) {
-    grid-row-start: span 2;
-  }
-  
-  /* --------VISTA PARA TABLETS */
-  
-  @media (min-width:768px) {
-    .gallery-container {
-      grid-template-columns: repeat(4, 1fr);
-    }
   .gallery__item:nth-child(2) {
     grid-column-start: span 2;
     grid-row-start: span 2;
@@ -191,27 +153,27 @@
   .gallery__item:nth-child(6) {
     grid-row-start: span 2;
   }
-  }
-  /* -------------ANIMACIONES INDUMENTARIA */
-  
-  #agrandar{
-    width: 90%;
-    margin: 5%;
-    grid-gap: 30px;
-  }
-  
-  #agrandar img{
-    width: 100%;
-    transition: all 300ms;
-  }
-  
-  #agrandar img:hover{
-    transform: scale(1.15);
-  }
-  
-  /* Una clase que use en bootstrap */
-  
-  .centro {
-    background-color: black;
-    color: white;
-  }
+}
+/* -------------ANIMACIONES INDUMENTARIA */
+#agrandar {
+  width: 90%;
+  margin: 5%;
+  grid-gap: 30px;
+}
+
+#agrandar img {
+  width: 100%;
+  transition: all 300ms;
+}
+
+#agrandar img:hover {
+  transform: scale(1.15);
+}
+
+/* Una clase que use en bootstrap */
+.centro {
+  background-color: black;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
